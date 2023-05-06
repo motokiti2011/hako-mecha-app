@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - pip install --upgrade pip
+      - pip install --upgrade awscli
+      - npm install -g @angular/cli
+      - npm install
+  build:
+    commands:
+      - ng build
+  post_build:
+    commands:
+      - aws s3 sync dist s3://${WEBSITE_S3_BUCKET} --delete

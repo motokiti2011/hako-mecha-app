@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="select_menu">
+    <div class="menu_item item" (click)="serviceSerchConditions()">サービスを探す</div>
+
+    <div class="menu_item item" (click)="serviceExhibit()">サービスを依頼・出品する</div>
+
+    <div *ngIf="temporaryUserDiv" class="menu_item item" (click)="serviceDealings()">取引中の情報</div>
+
+  </div>
+
+</div>
+
+<hr class="line" noshade="">
+
+<div class="image-area">
+  <img src="assets/images/img1.png" alt="image1">
+</div>
